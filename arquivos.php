@@ -58,23 +58,6 @@
         fclose($arquivoNovo);
     }
 
-    function criaArquivoDois(){
-        $arquivo = fopen("imcs.txt", "r");
-        $arquivoNovo = fopen("saida.txt","w");
-
-        while(!feof($arquivo)){
-            $nome = trim(fgets($arquivo));
-            $altura = fgets($arquivo);
-            $peso = fgets($arquivo);
-            $imc = calculoIMC($altura, $peso);
-            $classificacao = getClassificacao($imc);
-            $printIMC = $nome . " " . $imc . " " . $classificacao . "\n";
-            fwrite($arquivoNovo, $printIMC);            
-        }
-        fclose($arquivoNovo);
-        fclose($arquivo);
-    }
-    criaArquivoDois();
     $arquivo = "saida.txt";
     if(is_file($arquivo)){
         echo "é um arquivo.";
