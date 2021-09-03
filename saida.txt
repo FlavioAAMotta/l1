@@ -1,0 +1,4 @@
+Flavio 24.69 peso normal
+Joao 33.33 obesidade 1
+Maria 16.33 abaixo do peso
+Joana 45.79 obesidade 3
