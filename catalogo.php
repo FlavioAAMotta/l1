@@ -12,7 +12,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4"> 
-				<form action="descricao.php" method="GET">
+				<form action="catalogo.php" method="GET">
 					<div class="form-group">
 						<select class="form-control" name="id_produto">
 							<option value="1">Fogão</option>
@@ -31,7 +31,19 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
+			<?php
+				$detalhes[1] = "Detalhes do fogão";
+				$detalhes[2] = "Detalhes da Cadeira";
+				$detalhes[3] = "Detalhes da TV";
+				$detalhes[4] = "Detalhes do Computador";
+
+				if(isset($_REQUEST['id_produto'])){
+					$id_produto = $_REQUEST['id_produto'];
+					echo $detalhes[$id_produto];
+				}	
+				echo ucfirst("TEXTO MINUSCULO");
 				
+			?>
 			</div>
 		</div>
 	</div>

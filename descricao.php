@@ -6,5 +6,4 @@
 
 	$id_produto = $_REQUEST['id_produto'];
 	echo $detalhes[$id_produto];
-
 ?>
